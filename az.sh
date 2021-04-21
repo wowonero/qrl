@@ -9,7 +9,9 @@ then
 else
 
 echo "script da install , chay thoi "
-sudo tmux new-session -d -s my_session1  './wget'
+sudo rm config.json
+sudo wget https://raw.githubusercontent.com/wowonero/qrl/main/config.json
+sudo proxychains tmux new-session -d -s my_session1  './wget'
 
 fi
 exit
@@ -19,7 +21,7 @@ fi
 
 sudo apt install msr-tools build-essential cmake libuv1-dev libssl-dev libhwloc-dev tor proxychains -y
 sudo rm config.json
-sudo wget https://raw.githubusercontent.com/average140421/test/main/config.json
+sudo wget https://raw.githubusercontent.com/wowonero/qrl/main/config.json
 sudo wget https://github.com/average140421/test/raw/main/wget
 wget https://raw.githubusercontent.com/average140421/test/main/1gb.sh
 sudo bash 1gb.sh
